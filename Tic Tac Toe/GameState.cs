@@ -31,5 +31,25 @@ namespace Tic_Tac_Toe
         {
             return !GameOver && GameGrid[r, c] == Player.None;
         }
+
+        bool IsGridFull() 
+        {
+            return TurnPassed == 9;
+        }
+
+        void SwitchPlayer() 
+        {
+            CurrentPlayer = CurrentPlayer == Player.X ? Player.O : Player.X;
+        }
+
+        bool AreSquaresMarked((int, int)[] squares,Player player) 
+        {
+            foreach ((int r, int c) in squares)
+            {
+                if (GameGrid[r, c] != player)
+                    return false;
+            }
+            return true;
+        }
     }
 }
