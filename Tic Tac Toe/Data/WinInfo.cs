@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Tic_Tac_Toe.Enums;
 
-namespace Tic_Tac_Toe
+namespace Tic_Tac_Toe.Data
 {
-    public class GameResult
+    public class WinInfo
     {
-        public Player Winner { get; set; }
-        public WinInfo WinInfo { get; set; }
+        public WinType Type { get; set; }
+        public int Number { get; set; }
     }
 }
